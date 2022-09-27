@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ey5-T6-M6j">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Google Calendar Events-->
+        <scene sceneID="K2F-Qk-hv6">
+            <objects>
+                <viewController id="AOJ-e9-fSi" customClass="ViewController" customModule="GoogleCalendarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kmK-6z-NfE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CA8-ld-PAD">
+                                <rect key="frame" x="82" y="425.5" width="250" height="45"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="F7X-N4-LOq"/>
+                                    <constraint firstAttribute="width" constant="250" id="jIQ-D9-FcP"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SignIn">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btn_PrevRef:" destination="AOJ-e9-fSi" eventType="touchUpInside" id="izP-fn-pUb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jw0-Bq-fLG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CA8-ld-PAD" firstAttribute="centerX" secondItem="kmK-6z-NfE" secondAttribute="centerX" id="FWC-b6-yBF"/>
+                            <constraint firstItem="CA8-ld-PAD" firstAttribute="centerY" secondItem="kmK-6z-NfE" secondAttribute="centerY" id="XaT-cB-0at"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Google Calendar Events" id="YcE-lW-61c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="msW-qv-L7P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5020.289855072464" y="1265.625"/>
+        </scene>
+        <!--Google Calendar-->
+        <scene sceneID="dWU-rO-RV7">
+            <objects>
+                <viewController storyboardIdentifier="SyncGoogleCalEvents" id="ojb-ch-x0T" customClass="SyncGoogleCalEvents" customModule="GoogleCalendarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aqS-hy-GAF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LoM-pb-6vN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="0.0"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="Uqu-DW-HhB"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8P-RG-F62">
+                                <rect key="frame" x="8" y="52" width="398" height="284"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYU-eS-gIR" customClass="FSCalendar">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="284"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="pagingEnabled" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="eventDefaultColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                                <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                                <color key="value" name="AccentColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                                <color key="value" name="AccentColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsBoundingRectWhenChangingMonths" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="eventSelectionColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="headerMinimumDissolvedAlpha">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="ojb-ch-x0T" id="WNP-q2-TBg"/>
+                                            <outlet property="delegate" destination="ojb-ch-x0T" id="wzA-vh-diW"/>
+                                        </connections>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Y3-D1-JKL">
+                                        <rect key="frame" x="5" y="5" width="80" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Jvr-Gr-hU5"/>
+                                            <constraint firstAttribute="height" constant="40" id="Old-hA-0BK"/>
+                                        </constraints>
+                                        <state key="normal" image="backward" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btn_PrevRef:" destination="ojb-ch-x0T" eventType="touchUpInside" id="Ufx-BZ-Uj4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUU-Mz-iTQ">
+                                        <rect key="frame" x="313" y="5" width="80" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="AQ4-CO-mGr"/>
+                                            <constraint firstAttribute="width" constant="80" id="QIA-oN-gJD"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="bVx-gj-3hq"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="kqn-lB-aU6"/>
+                                        </constraints>
+                                        <state key="normal" image="forward" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btn_NextRef:" destination="ojb-ch-x0T" eventType="touchUpInside" id="dGU-21-dUW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="JYU-eS-gIR" firstAttribute="top" secondItem="M8P-RG-F62" secondAttribute="top" id="249-sw-x2f"/>
+                                    <constraint firstItem="6Y3-D1-JKL" firstAttribute="top" secondItem="M8P-RG-F62" secondAttribute="top" constant="5" id="2lY-BV-UvB"/>
+                                    <constraint firstItem="JYU-eS-gIR" firstAttribute="leading" secondItem="M8P-RG-F62" secondAttribute="leading" id="DS2-Bo-Ta0"/>
+                                    <constraint firstAttribute="trailing" secondItem="KUU-Mz-iTQ" secondAttribute="trailing" constant="5" id="GhI-Ex-c5A"/>
+                                    <constraint firstItem="6Y3-D1-JKL" firstAttribute="leading" secondItem="M8P-RG-F62" secondAttribute="leading" constant="5" id="VmM-s1-StF"/>
+                                    <constraint firstItem="KUU-Mz-iTQ" firstAttribute="top" secondItem="M8P-RG-F62" secondAttribute="top" constant="5" id="ZWj-aq-bL0"/>
+                                    <constraint firstAttribute="height" constant="284" id="i20-eC-AlS"/>
+                                    <constraint firstAttribute="trailing" secondItem="JYU-eS-gIR" secondAttribute="trailing" id="nEy-tA-vpn"/>
+                                    <constraint firstAttribute="bottom" secondItem="JYU-eS-gIR" secondAttribute="bottom" id="onA-ll-USf"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nTt-Xm-LAf">
+                                <rect key="frame" x="0.0" y="344" width="414" height="518"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ojb-ch-x0T" id="m8C-zT-rB7"/>
+                                    <outlet property="delegate" destination="ojb-ch-x0T" id="kSy-be-Po9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="miX-Mg-r7x"/>
+                        <color key="backgroundColor" red="0.54901963470000004" green="0.8392156959" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="nTt-Xm-LAf" firstAttribute="top" secondItem="M8P-RG-F62" secondAttribute="bottom" constant="8" symbolic="YES" id="7gY-O9-ljL"/>
+                            <constraint firstItem="miX-Mg-r7x" firstAttribute="trailing" secondItem="LoM-pb-6vN" secondAttribute="trailing" id="7yO-w9-4rU"/>
+                            <constraint firstItem="nTt-Xm-LAf" firstAttribute="trailing" secondItem="miX-Mg-r7x" secondAttribute="trailing" id="CFV-pM-1DT"/>
+                            <constraint firstItem="miX-Mg-r7x" firstAttribute="trailing" secondItem="M8P-RG-F62" secondAttribute="trailing" constant="8" id="Can-Eo-HF0"/>
+                            <constraint firstItem="M8P-RG-F62" firstAttribute="top" secondItem="LoM-pb-6vN" secondAttribute="bottom" constant="8" symbolic="YES" id="Tae-g8-NKj"/>
+                            <constraint firstItem="nTt-Xm-LAf" firstAttribute="bottom" secondItem="miX-Mg-r7x" secondAttribute="bottom" id="bNL-hy-VFf"/>
+                            <constraint firstItem="LoM-pb-6vN" firstAttribute="leading" secondItem="miX-Mg-r7x" secondAttribute="leading" id="ias-jA-Mbn"/>
+                            <constraint firstItem="M8P-RG-F62" firstAttribute="leading" secondItem="miX-Mg-r7x" secondAttribute="leading" constant="8" id="kxK-KI-ZJ6"/>
+                            <constraint firstItem="LoM-pb-6vN" firstAttribute="top" secondItem="miX-Mg-r7x" secondAttribute="top" id="uTn-GM-dU0"/>
+                            <constraint firstItem="nTt-Xm-LAf" firstAttribute="leading" secondItem="miX-Mg-r7x" secondAttribute="leading" id="yJn-cU-3OO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Google Calendar" id="cl9-Ad-eiv">
+                        <barButtonItem key="rightBarButtonItem" image="shuffle" catalog="system" id="JkR-rL-aR7">
+                            <connections>
+                                <action selector="shuffleAction:" destination="ojb-ch-x0T" id="KfO-3q-uoO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="calendar" destination="JYU-eS-gIR" id="Gyp-Yf-UzU"/>
+                        <outlet property="calendarHeightConstraint" destination="i20-eC-AlS" id="bva-VX-AZ5"/>
+                        <outlet property="calenderEventsTableview" destination="nTt-Xm-LAf" id="DiY-FZ-vig"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WY5-xb-aQd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5673.913043478261" y="1259.5982142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ONJ-Bt-5PG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ey5-T6-M6j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0e1-4H-LzH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AOJ-e9-fSi" kind="relationship" relationship="rootViewController" id="sme-5H-EA2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIc-wu-PXH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4110.144927536232" y="1265.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backward" catalog="system" width="128" height="79"/>
+        <image name="forward" catalog="system" width="128" height="79"/>
+        <image name="shuffle" catalog="system" width="128" height="95"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
